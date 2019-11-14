@@ -24,7 +24,7 @@
             $queryFetch = $conn->query($queryUsers);
             $result = $queryFetch->fetch_assoc();
             echo "<br>";
-            echo $result['name'];
+           
             
          }
         function getRoles($conn){
@@ -32,14 +32,13 @@
             $queryFetch = $conn->query($queryUsers);
             $result = $queryFetch->fetch_assoc();
             echo "<br>";
-            echo $result['role_name'];
+            
         }
         function getFavorities($conn){
             $queryUsers = "SELECT * FROM favorities";
             $queryFetch = $conn->query($queryUsers);
             $result = $queryFetch->fetch_assoc();
-            echo "<br>";
-            echo $result['id'];
+           
             
         }
     }
