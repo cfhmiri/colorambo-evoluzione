@@ -1,5 +1,5 @@
 <?php
-    require "dbUtilis.php";
+    require "dbUtils.php";
 
     function GetAll() //-----dipenderà dalle tabelle presenti nel db
         $conn = connectDB();

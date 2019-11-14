@@ -1,5 +1,5 @@
 <?php
-    include "php/controller.php"
+    include "PHPGlorioso/controller.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
