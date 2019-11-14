@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 require "dbUtils.php";
+=======
+    require "dbUtils.php";
+>>>>>>> 4c3d3699976ac40e02dbe5658701f87139b9d296
 
 function getAllUsers(){
     $conn = connectDB();
