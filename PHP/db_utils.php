@@ -16,7 +16,7 @@
            $queryFetch = $conn->query($queryUsers);
            $result = $queryFetch->fetch_all();
            echo "<br>";
-           var_dump ($result);
+           
            
         }
         function getColors($conn){
