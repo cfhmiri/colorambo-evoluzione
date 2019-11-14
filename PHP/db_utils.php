@@ -10,36 +10,27 @@
             return $conn;
         }
     
-
         function getUsers($conn){
            $queryUsers = "SELECT * FROM users";
            $queryFetch = $conn->query($queryUsers);
            $result = $queryFetch->fetch_all();
-           echo "<br>";
-           
-           
         }
         function getColors($conn){
             $queryUsers = "SELECT * FROM colors";
             $queryFetch = $conn->query($queryUsers);
             $result = $queryFetch->fetch_assoc();
-            echo "<br>";
-           
-            
          }
+
         function getRoles($conn){
             $queryUsers = "SELECT * FROM roles";
             $queryFetch = $conn->query($queryUsers);
             $result = $queryFetch->fetch_assoc();
-            echo "<br>";
-            
         }
+
         function getFavorities($conn){
             $queryUsers = "SELECT * FROM favorities";
             $queryFetch = $conn->query($queryUsers);
             $result = $queryFetch->fetch_assoc();
-           
-            
         }
     }
 ?>
