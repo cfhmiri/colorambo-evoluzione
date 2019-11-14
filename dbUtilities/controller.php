@@ -1,22 +1,63 @@
 <?php
-    require "dbUtilis.php";
+require "dbUtils.php";
 
-    function GetAll() //-----dipenderà dalle tabelle presenti nel db
-        $conn = connectDB();
+function getAllUsers(){
+    $conn = connectDB();
 
-        $sqlAll = "  
-            SELECT * FROM
-        "  //-------- inserire il nome della tabella dalla quale si vogliono estrapolare i dati
+    $sqlAllUsers = "
+    SELECT * FROM USERS
+    ";
 
-        $resultSet = mysqli_query($conn, $sqlAll);
+    $resultSet = mysqli_query($conn, $sqlAllUsers);
 
-        $ListFromDB = []; //-------inserire il nome all'inizio dell'array in base alla tab. usata
+    $usersListFromDB = [];
 
-        if ($resultSet) {
-            $ListFromDB = mysqli_fetch_all($resultSet, MYSQLI_ASSOC);
-        }
+    if ($resultSet) {
+      $UsersListFromDB = mysqli_fetch_all($resultSet, MYSQLI_ASSOC);
+    }
+  
+    return $UsersListFromDB;
+  }
+  
 
-        return $ListFromDB;
+function getAllColors(){
+    $conn = connectDB();
 
-//----utilizzabile per richieste di estrapolare tutti i dati da una tab ma possibile anche per query più complex.
-?>
+    $sqlAllColors = "
+    SELECT * FROM COLORS
+    ";
+
+    $resultSet = mysqli_query($conn, $sqlAllColors);
+
+    $usersListFromDB = [];
+
+    if ($resultSet) {
+      $ColorsListFromDB = mysqli_fetch_all($resultSet, MYSQLI_ASSOC);
+    }
+  
+    return $ColorsListFromDB;
+  }
+
+
+function getAllRoles(){
+    $conn = connectDB();
+
+    $sqlAllRoles = "
+    SELECT * FROM ROLES
+    ";
+
+    $resultSet = mysqli_query($conn, $sqlAllRoles);
+
+    $rolesListFromDB = [];
+
+    if ($resultSet) {
+      $rolesListFromDB = mysqli_fetch_all($resultSet, MYSQLI_ASSOC);
+    }
+  
+    return $rolesListFromDB;
+  }
+  
+
+
+
+  ?>
