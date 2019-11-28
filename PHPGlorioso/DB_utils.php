@@ -9,7 +9,8 @@
 
     if (!$conn) {
         die ("Connessione non riuscita con $servername <br>");
-    } else {
+    } else { 
+        echo "NO";
 
     }
     return $conn;
