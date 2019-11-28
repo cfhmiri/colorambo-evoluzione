@@ -1,6 +1,6 @@
 <?php
     $servername = "localhost";
-    $username = "colorambo_glorioso";
+    $username = "root";
     $password = "";
     
 
@@ -10,7 +10,6 @@
     if (!$conn) {
         die ("Connessione al db $servername fallita" . mysqli_connect_error());
     }
-
 //Creare DB
 $sql = "CREATE DATABASE colorambo_glorioso"; 
 if (mysqli_query($conn, $sql)) {

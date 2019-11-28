@@ -1,8 +1,11 @@
 <?php
+
+    include "createDB.php";
+
     function getDBConnection() {
 
     $servername = "localhost"; 
-    $username = "colorambo_glorioso"; 
+    $username = "root"; 
     $password = ""; 
 
     $conn = mysqli_connect($servername, $username, $password); 
@@ -10,7 +13,6 @@
     if (!$conn) {
         die ("Connessione non riuscita con $servername <br>");
     } else { 
-        echo "NO";
 
     }
     return $conn;
