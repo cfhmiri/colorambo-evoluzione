@@ -12,11 +12,10 @@
     }
 //Creare DB
 $sql = "CREATE DATABASE colorambo_glorioso"; 
-if (mysqli_query($conn, $sql)) {
-    echo "Database creato con successo";
-} else {
-    echo "Errore creazione DB" . mysqli_error($conn);
-}
+// if (mysqli_query($conn, $sql)) {
+// } else {
+//     echo "Errore creazione DB" . mysqli_error($conn);
+// }
 
 mysqli_close($conn);
 ?>
