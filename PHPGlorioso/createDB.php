@@ -17,5 +17,112 @@ $sql = "CREATE DATABASE colorambo_glorioso";
 //     echo "Errore creazione DB" . mysqli_error($conn);
 // }
 
+// mysqli_close($conn);
+
+$db_selected = mysqli_select_db($conn,'colorambo_glorioso' );
+if (!$db_selected) {
+    die ('Can\'t use colorambo_glorioso : ' . mysqli_error());
+}
+
+//Creazione Tabelle
+/*$sql= "CREATE TABLE `colors` (
+    `id_color` int(11) NOT NULL,
+    `name` varchar(255) NOT NULL,
+    `code` varchar(7) DEFAULT NULL,
+    `user_id` int(10) NOT NULL
+  )";
+
+if ($conn->query($sql) === TRUE){
+    echo "Tabella creata";
+}else {
+    echo "errore " . $conn->error;
+}
+
+
+$sql= "CREATE TABLE `users` (
+    `id` int(11) NOT NULL,
+    `f_name` varchar(255) NOT NULL,
+    `l_name` varchar(255) DEFAULT NULL,
+    `birth_date` datetime DEFAULT NULL,
+    `username` varchar(255) NOT NULL,
+    `password` varchar(255) NOT NULL,
+    `role_id` varchar(20) NOT NULL
+  )";
+
+if ($conn->query($sql) === TRUE){
+    echo "Tabella creata";
+} else {
+    echo "errore " . $conn->error;
+}
+
+$sql= "CREATE TABLE `roles` (
+    `id` int(11) NOT NULL,
+    `role_name` varchar(255) NOT NULL
+  )";
+
+if ($conn->query($sql) === TRUE){
+    echo "Tabella creata";
+}else {
+    echo "errore " . $conn->error;
+}
+
+$sql="CREATE TABLE `stats` (
+    `id` int(11) NOT NULL,
+    `num_colors` int(90) NOT NULL,
+    `num_login` int(255) DEFAULT NULL,
+    `num_pages` int(15) DEFAULT NULL,
+    `user_id` varchar(255) NOT NULL,
+    `color_id` varchar(255) NOT NULL,
+    `role_id` varchar(20) NOT NULL
+      )";
+
+    if ($conn->query($sql) === TRUE){
+        echo "Tabella creata";
+    } else {
+        echo "errore " . $conn->error;
+    }
+
+ $sql= "CREATE TABLE `favorites` (
+     `id` int(11) NOT NULL,
+     `date` datetime NOT NULL,
+     `color_id` varchar(7) DEFAULT NULL,
+     `user_id` int(10) DEFAULT NULL
+     )";
+
+
+    if ($conn->query($sql) === TRUE){
+        echo "Tabella" .  $sql . "creata";
+    }else {
+        echo "errore " . $conn->error;
+    }*/
+
+//Creazione primary e foreign
+$sql= "ALTER TABLE `colors` 
+       ADD PRIMARY KEY (`id_color`)";
+echo $sql ."<br><br>";
+
+$sql= "ALTER TABLE `users` 
+       ADD PRIMARY KEY (`id`)";
+echo $sql ."<br><br>";
+
+$sql= "ALTER TABLE `stats` 
+       ADD PRIMARY KEY (`id`)";
+echo $sql ."<br><br>";
+ 
+$sql= "ALTER TABLE `favorites` 
+       ADD PRIMARY KEY (`id`)";
+echo $sql ."<br><br>";
+
+$sql= "ALTER TABLE `roles` 
+       ADD PRIMARY KEY (`id`)";
+echo $sql ."<br><br>";
+
+if ($conn->query($sql) === TRUE){
+  echo "PRIMARY creata";
+}else {
+  echo "errore " . $conn->error;
+}
+
+
 mysqli_close($conn);
 ?>
