@@ -25,7 +25,7 @@ if (!$db_selected) {
 }
 
 //Creazione Tabelle
-$sql= "CREATE TABLE `colors` (
+/*$sql= "CREATE TABLE `colors` (
     `id_color` int(11) NOT NULL,
     `name` varchar(255) NOT NULL,
     `code` varchar(7) DEFAULT NULL,
@@ -33,7 +33,7 @@ $sql= "CREATE TABLE `colors` (
   )";
 
 if ($conn->query($sql) === TRUE){
-    echo "Tabella" .  $sql . "creata";
+    echo "Tabella creata";
 }else {
     echo "errore " . $conn->error;
 }
@@ -50,7 +50,7 @@ $sql= "CREATE TABLE `users` (
   )";
 
 if ($conn->query($sql) === TRUE){
-    echo "Tabella" .  $sql . "creata";
+    echo "Tabella creata";
 } else {
     echo "errore " . $conn->error;
 }
@@ -61,7 +61,7 @@ $sql= "CREATE TABLE `roles` (
   )";
 
 if ($conn->query($sql) === TRUE){
-    echo "Tabella" .  $sql . "creata";
+    echo "Tabella creata";
 }else {
     echo "errore " . $conn->error;
 }
@@ -77,7 +77,7 @@ $sql="CREATE TABLE `stats` (
       )";
 
     if ($conn->query($sql) === TRUE){
-        echo "Tabella" .  $sql . "creata";
+        echo "Tabella creata";
     } else {
         echo "errore " . $conn->error;
     }
@@ -94,7 +94,35 @@ $sql="CREATE TABLE `stats` (
         echo "Tabella" .  $sql . "creata";
     }else {
         echo "errore " . $conn->error;
-    }
-   
+    }*/
+
+//Creazione primary e foreign
+$sql= "ALTER TABLE `colors` 
+       ADD PRIMARY KEY (`id_color`)";
+echo $sql ."<br><br>";
+
+$sql= "ALTER TABLE `users` 
+       ADD PRIMARY KEY (`id`)";
+echo $sql ."<br><br>";
+
+$sql= "ALTER TABLE `stats` 
+       ADD PRIMARY KEY (`id`)";
+echo $sql ."<br><br>";
+ 
+$sql= "ALTER TABLE `favorites` 
+       ADD PRIMARY KEY (`id`)";
+echo $sql ."<br><br>";
+
+$sql= "ALTER TABLE `roles` 
+       ADD PRIMARY KEY (`id`)";
+echo $sql ."<br><br>";
+
+if ($conn->query($sql) === TRUE){
+  echo "PRIMARY creata";
+}else {
+  echo "errore " . $conn->error;
+}
+
+
 mysqli_close($conn);
 ?>
