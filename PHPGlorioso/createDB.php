@@ -32,6 +32,11 @@ $sql= "CREATE TABLE `colors` (
     `user_id` int(10) NOT NULL
   )";
 
+if ($conn->query($sql) === TRUE){
+    echo "Tabella" .  $sql . "creata";
+}else {
+    echo "errore " . $conn->error;
+}
 
 
 $sql= "CREATE TABLE `users` (
@@ -44,12 +49,22 @@ $sql= "CREATE TABLE `users` (
     `role_id` varchar(20) NOT NULL
   )";
 
-
+if ($conn->query($sql) === TRUE){
+    echo "Tabella" .  $sql . "creata";
+} else {
+    echo "errore " . $conn->error;
+}
 
 $sql= "CREATE TABLE `roles` (
     `id` int(11) NOT NULL,
     `role_name` varchar(255) NOT NULL
   )";
+
+if ($conn->query($sql) === TRUE){
+    echo "Tabella" .  $sql . "creata";
+}else {
+    echo "errore " . $conn->error;
+}
 
 $sql="CREATE TABLE `stats` (
     `id` int(11) NOT NULL,
@@ -60,6 +75,12 @@ $sql="CREATE TABLE `stats` (
     `color_id` varchar(255) NOT NULL,
     `role_id` varchar(20) NOT NULL
       )";
+
+    if ($conn->query($sql) === TRUE){
+        echo "Tabella" .  $sql . "creata";
+    } else {
+        echo "errore " . $conn->error;
+    }
 
  $sql= "CREATE TABLE `favorites` (
      `id` int(11) NOT NULL,
