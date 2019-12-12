@@ -20,10 +20,10 @@
         </div>
 
         <div class="login" >
-            <div class="scritta" style = "color: rgb(15, 15, 15);">
+            <div class="scritta" style = "color: rgb(15, 15, 15); cursor: none;">
                 Login | Iscriviti 
             </div>
-            <div class="user" style = "color: rgb(15, 15, 15);"><i class="fas fa-user"></i></div>
+            <div class="user" style = "color: rgb(15, 15, 15); cursor: none;"><i class="fas fa-user"></i></div>
                 
         </div>
     </header>
@@ -54,17 +54,10 @@
                 <input type="password" placeholder="Password" name="passwd" value="">
             </div>
 
-<<<<<<< HEAD
             <form action="" class="radio">
                 <input type="radio" name="" value=""> Creatore
                 <input type="radio" name="" value=""> Basic 
             </form>
-=======
-            <div class="radio">
-                <input type="radio" name="creator" value=""> Creatore
-                <input type="radio" name="basic" value=""> Basic
-            </div>
->>>>>>> 3ad287a0a695486a0289df5e9c244b02a2d51f6b
            
 
             <input class="btn" type="button" name="" value="Sign in">
@@ -73,7 +66,7 @@
     </form>
 
      <!-- footer -->
-     
+
      <div class="fixed">
         <footer>
             <div class="footer">
