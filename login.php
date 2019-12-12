@@ -52,21 +52,23 @@
         </div>
          <!-- footer -->
 
-        <footer>
-            <div class="footer">
-                <div class="social">
-                    <div class="pallino"><i class="fab fa-facebook-f"></i></div>
-                    <div class="pallino"><i class="fab fa-twitter"></i></div>
-                    <div class="pallino"><i class="fab fa-google-plus-g"></i></div>
-                    <div class="pallino"><i class="fab fa-linkedin-in"></i> </div>
+        <div class="fixed">
+            <footer>
+                <div class="footer">
+                    <div class="social">
+                        <div class="pallino"><i class="fab fa-facebook-f"></i></div>
+                        <div class="pallino"><i class="fab fa-twitter"></i></div>
+                        <div class="pallino"><i class="fab fa-google-plus-g"></i></div>
+                        <div class="pallino"><i class="fab fa-linkedin-in"></i> </div>
+                    </div>
+    
                 </div>
 
-                
-            </div>
                 <div class="copyright">
                     Created by: alcolisti unanimi
                 </div>
-        </footer>
+            </footer>
+        </div>
 
     </body>
 </html>

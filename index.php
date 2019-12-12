@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/710855d3d8.js" crossorigin="anonymous"></script>
     <title>ColoBamba</title>
 </head>
 <body>
@@ -35,21 +36,23 @@
         
 
     <!-- footer -->
-
-    <footer>
-        <div class="footer">
-            <div class="social">
-                <div class="pallino"><i class="fab fa-facebook-f"></i></div>
-                <div class="pallino"><i class="fab fa-twitter"></i></div>
-                <div class="pallino"><i class="fab fa-google-plus-g"></i></div>
-                <div class="pallino"><i class="fab fa-linkedin-in"></i> </div>
+    <div class="fixed">
+        <footer>
+            <div class="footer">
+                <div class="social">
+                    <div class="pallino"><i class="fab fa-facebook-f"></i></div>
+                    <div class="pallino"><i class="fab fa-twitter"></i></div>
+                    <div class="pallino"><i class="fab fa-google-plus-g"></i></div>
+                    <div class="pallino"><i class="fab fa-linkedin-in"></i> </div>
+                </div>
+ 
             </div>
 
-            
-        </div>
-        <div class="copyright">
-            Created by: alcolisti unanimi
-        </div>
-    </footer>
+            <div class="copyright">
+                Created by: alcolisti unanimi
+            </div>
+        </footer>
+    </div>
+   
 </body>
 </html>

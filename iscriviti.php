@@ -55,7 +55,7 @@
 
             <form action="" class="radio">
                 <input type="radio" name="" value=""> Creatore
-                <input type="radio" name="" value=""> quellaltro
+                <input type="radio" name="" value=""> Basic 
             </form>
            
 
@@ -65,22 +65,24 @@
     </div>
 
      <!-- footer -->
-
-     <footer>
-        <div class="footer">
-            <div class="social">
-                <div class="pallino"><i class="fab fa-facebook-f"></i></div>
-                <div class="pallino"><i class="fab fa-twitter"></i></div>
-                <div class="pallino"><i class="fab fa-google-plus-g"></i></div>
-                <div class="pallino"><i class="fab fa-linkedin-in"></i> </div>
+     
+     <div class="fixed">
+        <footer>
+            <div class="footer">
+                <div class="social">
+                    <div class="pallino"><i class="fab fa-facebook-f"></i></div>
+                    <div class="pallino"><i class="fab fa-twitter"></i></div>
+                    <div class="pallino"><i class="fab fa-google-plus-g"></i></div>
+                    <div class="pallino"><i class="fab fa-linkedin-in"></i> </div>
+                </div>
+ 
             </div>
 
-            
-        </div>
-        <div class="copyright">
-            Created by: alcolisti unanimi
-        </div>
-    </footer>
+            <div class="copyright">
+                Created by: alcolisti unanimi
+            </div>
+        </footer>
+    </div>
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
