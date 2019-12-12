@@ -19,34 +19,47 @@
         </div>
 
         <div class="login" >
-            <div class="scritta" style = "color: black;">
+            <div class="scritta" style = "color: rgb(15, 15, 15);">
                 Login | Iscriviti 
             </div>
-            <div class="user" style = "color: black;"><i class="fas fa-user"></i></div>
+            <div class="user" style = "color: rgb(15, 15, 15);"><i class="fas fa-user"></i></div>
                 
         </div>
     </header>
 
-    <div class="container-log">  
+    <div class="container-log-iscriviti">  
         <div class="login-box">
-            <h1>
+            <h1 style="padding: 12.5px 0">
                 Iscriviti
             </h1>
 
-        <div class="textbox">
-            <label for="">Nome</label>
-            <input type="text" placeholder="Nome" name="" value="">
-        </div>
+            <div class="textbox-iscriviti">
+                <input type="text" placeholder="Nome" name="" value="">
+            </div>
 
-        <div class="textbox">
-            <input type="password" placeholder="Cognome" name="" value="">
-        </div>
+            <div class="textbox-iscriviti">
+                <input type="text" placeholder="Cognome" name="" value="">
+            </div>
 
-        <div class="textbox">
-            <input type="text" id="datepicker">
-        </div>
+            <div class="textbox-iscriviti">
+                <input type="text" placeholder="Data di nascita" id="datepicker" name="" value="">
+            </div>
 
-        <input class="btn" type="button" name="" value="Sign in">
+            <div class="textbox-iscriviti">
+                <input type="text" placeholder="Username" name="" value="">
+            </div>
+
+            <div class="textbox-iscriviti">
+                <input type="password" placeholder="Password" name="" value="">
+            </div>
+
+            <form action="" class="radio">
+                <input type="radio" name="" value=""> Creatore
+                <input type="radio" name="" value=""> quellaltro
+            </form>
+           
+
+            <input class="btn" type="button" name="" value="Sign in">
 
         </div>
     </div>

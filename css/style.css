@@ -179,3 +179,42 @@ footer{
     color: rgb(39, 181, 46);
     font-weight: bold;
 }
+
+.radio{
+    display: inline;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+}
+
+.textbox-iscriviti{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 7px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid rgb(39, 181, 46);
+}
+
+.container-log-iscriviti{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.textbox-iscriviti i{
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+
+.textbox-iscriviti input{
+    border: none;
+    outline: none;
+    background: none;
+    color:black;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+}

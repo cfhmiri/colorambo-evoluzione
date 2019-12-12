@@ -19,10 +19,10 @@
             </div>
 
             <div class="login" >
-                <div class="scritta" style = "color: black;">
+                <div class="scritta" style = "color: rgb(15, 15, 15);">
                     Login | Iscriviti 
                 </div>
-                <div class="user" style = "color: black;"><i class="fas fa-user"></i></div>
+                <div class="user" style = "color: rgb(15, 15, 15);"><i class="fas fa-user"></i></div>
                     
             </div>
         </header>
