@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/710855d3d8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 </head>
 
 <body>
@@ -27,42 +28,42 @@
         </div>
     </header>
 
-    <div class="container-log-iscriviti">  
+    <form method="POST" action="data.php" class="container-log-iscriviti">  
         <div class="login-box">
             <h1 style="padding: 12.5px 0">
                 Iscriviti
             </h1>
 
             <div class="textbox-iscriviti">
-                <input type="text" placeholder="Nome" name="" value="">
+                <input type="text" placeholder="Nome" name="name" value="">
             </div>
 
             <div class="textbox-iscriviti">
-                <input type="text" placeholder="Cognome" name="" value="">
+                <input type="text" placeholder="Cognome" name="surname" value="">
             </div>
 
             <div class="textbox-iscriviti">
-                <input type="text" placeholder="Data di nascita" id="datepicker" name="" value="">
+                <input type="text" placeholder="Data di nascita" id="datepicker" name="birth" value="">
             </div>
 
             <div class="textbox-iscriviti">
-                <input type="text" placeholder="Username" name="" value="">
+                <input type="text" placeholder="Username" name="username" value="">
             </div>
 
             <div class="textbox-iscriviti">
-                <input type="password" placeholder="Password" name="" value="">
+                <input type="password" placeholder="Password" name="passwd" value="">
             </div>
 
-            <form action="" class="radio">
-                <input type="radio" name="" value=""> Creatore
-                <input type="radio" name="" value=""> quellaltro
-            </form>
+            <div class="radio">
+                <input type="radio" name="creator" value=""> Creatore
+                <input type="radio" name="basic" value=""> Basic
+            </div>
            
 
             <input class="btn" type="button" name="" value="Sign in">
 
         </div>
-    </div>
+    </form>
 
      <!-- footer -->
 
