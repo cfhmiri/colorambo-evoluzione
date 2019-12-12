@@ -25,13 +25,13 @@ if (!$db_selected) {
 }
 
 //Creazione Tabelle
-$sql= "CREATE TABLE `colors` (
+/*$sql= "CREATE TABLE `colors` (
     `id_color` int(11) NOT NULL,
     `name` varchar(255) NOT NULL,
     `code` varchar(7) DEFAULT NULL,
     `user_id` int(11) NOT NULL
   )";
-
+echo $sql ."<br><br>";
 if ($conn->query($sql) === TRUE){
     echo "Tabella creata";
 }else {
@@ -48,7 +48,7 @@ $sql= "CREATE TABLE `users` (
     `password` varchar(255) NOT NULL,
     `role_id` int(11) NOT NULL
   )";
-
+echo $sql ."<br><br>";
 if ($conn->query($sql) === TRUE){
     echo "Tabella creata";
 } else {
@@ -59,7 +59,7 @@ $sql= "CREATE TABLE `roles` (
     `id_role` int(11) NOT NULL,
     `role_name` varchar(255) NOT NULL
   )";
-
+echo $sql ."<br><br>";
 if ($conn->query($sql) === TRUE){
     echo "Tabella creata";
 }else {
@@ -75,7 +75,7 @@ $sql="CREATE TABLE `stats` (
     `color_id`int(11) NOT NULL,
     `role_id` int(11) NOT NULL
       )";
-
+echo $sql ."<br><br>";
     if ($conn->query($sql) === TRUE){
         echo "Tabella creata";
     } else {
@@ -88,7 +88,7 @@ $sql="CREATE TABLE `stats` (
      `color_id` int(11) DEFAULT NULL,
      `user_id` int(11) DEFAULT NULL
      )";
-
+echo $sql ."<br><br>";
 
     if ($conn->query($sql) === TRUE){
         echo "Tabella" .  $sql . "creata";
@@ -101,7 +101,7 @@ $sql= "ALTER TABLE `colors`
        ADD PRIMARY KEY (`id_color`)";
 echo $sql ."<br><br>";
 if ($conn->query($sql) === TRUE){
-  echo "foreign creata";
+  echo "primary creata";
 }else {
   echo "errore " . $conn->error;
 }
@@ -110,7 +110,7 @@ $sql= "ALTER TABLE `users`
        ADD PRIMARY KEY (`id_user`)";
 echo $sql ."<br><br>";
 if ($conn->query($sql) === TRUE){
-  echo "foreign creata";
+  echo "primary creata";
 }else {
   echo "errore " . $conn->error;
 }
@@ -119,7 +119,7 @@ $sql= "ALTER TABLE `stats`
        ADD PRIMARY KEY (`id_stat`)";
 echo $sql ."<br><br>";
 if ($conn->query($sql) === TRUE){
-  echo "foreign creata";
+  echo "primary creata";
 }else {
   echo "errore " . $conn->error;
 }
@@ -128,7 +128,7 @@ $sql= "ALTER TABLE `favorites`
        ADD PRIMARY KEY (`id_fav`)";
 echo $sql ."<br><br>";
 if ($conn->query($sql) === TRUE){
-  echo "foreign creata";
+  echo "primary creata";
 }else {
   echo "errore " . $conn->error;
 }
@@ -137,30 +137,82 @@ $sql= "ALTER TABLE `roles`
        ADD PRIMARY KEY (`id_role`)";
 echo $sql ."<br><br>";
 if ($conn->query($sql) === TRUE){
-  echo "foreign creata";
+  echo "primary creata";
 }else {
   echo "errore " . $conn->error;
-}
+}*/
 
+/*$sql="ALTER TABLE colors
+      ADD FOREIGN KEY (user_id) REFERENCES users(id_user)";
 
-/*$sql ="ALTER TABLE `colors`
-       ADD CONSTRAINT `user_fk` FOREIGN KEY (`user_id`) REFERENCES `users`(`id`)";
-
-$sql ="ALTER TABLE `favorites`
-       ADD CONSTRAINT `color_fk` FOREIGN KEY (`color_id`) REFERENCES `colors`(`id_color`),
-       ADD CONSTRAINT `user_fk`  FOREIGN KEY (`user_id`) REFERENCES `users`(`id`)";
-
+echo $sql ."<br><br>";
 if ($conn->query($sql) === TRUE){
   echo "foreign creata";
 }else {
   echo "errore " . $conn->error;
-}
-$sql ="ALTER TABLE `stats`
-       ADD CONSTRAINT `user_fk` FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
-       ADD CONSTRAINT `color_fk` FOREIGN KEY (`color_id`) REFERENCES `colors`(`id_color`),
-       ADD CONSTRAINT `role_fk`  FOREIGN KEY (`role_id`) REFERENCES `roles`(`id`)";
+}*/
 
-*/
+/*$sql="ALTER TABLE favorites
+      ADD FOREIGN KEY (color_id) REFERENCES colors(id_color)";
+
+echo $sql ."<br><br>";
+if ($conn->query($sql) === TRUE){
+  echo "foreign creata";
+}else {
+  echo "errore " . $conn->error;
+}*/
+
+/*$sql="ALTER TABLE favorites
+      ADD FOREIGN KEY (user_id) REFERENCES users(id_user)";
+
+echo $sql ."<br><br>";
+if ($conn->query($sql) === TRUE){
+  echo "foreign creata";
+}else {
+  echo "errore " . $conn->error;
+}*/
+
+/*$sql="ALTER TABLE stats
+      ADD FOREIGN KEY (user_id) REFERENCES users(id_user)";
+
+echo $sql ."<br><br>";
+if ($conn->query($sql) === TRUE){
+  echo "foreign creata";
+}else {
+  echo "errore " . $conn->error;
+}*/
+
+/*$sql="ALTER TABLE stats
+      ADD FOREIGN KEY (color_id) REFERENCES colors(id_color)";
+
+echo $sql ."<br><br>";
+if ($conn->query($sql) === TRUE){
+  echo "foreign creata";
+}else {
+  echo "errore " . $conn->error;
+}*/
+
+/*$sql="ALTER TABLE stats
+      ADD FOREIGN KEY (role_id) REFERENCES roles(id_role)";
+
+echo $sql ."<br><br>";
+if ($conn->query($sql) === TRUE){
+  echo "foreign creata";
+}else {
+  echo "errore " . $conn->error;
+}*/
+
+/*$sql="ALTER TABLE users
+      ADD FOREIGN KEY (role_id) REFERENCES roles(id_role)";
+
+echo $sql ."<br><br>";
+if ($conn->query($sql) === TRUE){
+  echo "foreign creata";
+}else {
+  echo "errore " . $conn->error;
+}*/
+
+
 
 mysqli_close($conn);
 ?>
