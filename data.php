@@ -23,9 +23,9 @@
      $toinsert = "INSERT INTO users
                      (f_name, l_name, birth_date, username, password)
                      VALUES
-                     ('$name',
-                     '$surname',
-                     '$birth',
+                     ('$f_name',
+                     '$l_name',
+                     '$birth_date',
                      '$username',
                      '$passwd'
                      )";
@@ -38,6 +38,9 @@
     } else{
         echo("<br>Inserimento non eseguito");
     }
+
+
+
 
     mysqli_close($conn);
 ?>

@@ -55,8 +55,8 @@
             </div>
 
             <div class="radio">
-                <input type="radio" name="" value=""> Creatore
-                <input type="radio" name="" value=""> Basic 
+                <input type="radio" name="name" value=""> Creatore
+                <input type="radio" name="name" value=""> Basic 
             </div>
            
 

@@ -29,7 +29,7 @@ if (!$db_selected) {
     `id_color` int(11) NOT NULL,
     `name` varchar(255) NOT NULL,
     `code` varchar(7) DEFAULT NULL,
-    `user_id` int(11) NOT NULL
+    `user_id` int(11) 
   )";
 echo $sql ."<br><br>";
 if ($conn->query($sql) === TRUE){
@@ -46,7 +46,7 @@ $sql= "CREATE TABLE `users` (
     `birth_date` datetime DEFAULT NULL,
     `username` varchar(255) NOT NULL,
     `password` varchar(255) NOT NULL,
-    `role_id` int(11) NOT NULL
+    `role_id` varchar(255)
   )";
 echo $sql ."<br><br>";
 if ($conn->query($sql) === TRUE){
@@ -56,7 +56,7 @@ if ($conn->query($sql) === TRUE){
 }
 
 $sql= "CREATE TABLE `roles` (
-    `id_role` int(11) NOT NULL,
+    `id_role` varchar(255),
     `role_name` varchar(255) NOT NULL
   )";
 echo $sql ."<br><br>";
@@ -71,9 +71,9 @@ $sql="CREATE TABLE `stats` (
     `num_colors` int(90) NOT NULL,
     `num_login` int(255) DEFAULT NULL,
     `num_pages` int(15) DEFAULT NULL,
-    `user_id` int(11) NOT NULL,
-    `color_id`int(11) NOT NULL,
-    `role_id` int(11) NOT NULL
+    `user_id` int(11),
+    `color_id`int(11),
+    `role_id` varchar(255)
       )";
 echo $sql ."<br><br>";
     if ($conn->query($sql) === TRUE){
@@ -85,8 +85,8 @@ echo $sql ."<br><br>";
  $sql= "CREATE TABLE `favorites` (
      `id_fav` int(11) NOT NULL,
      `date` datetime NOT NULL,
-     `color_id` int(11) DEFAULT NULL,
-     `user_id` int(11) DEFAULT NULL
+     `color_id` int(11),
+     `user_id` int(11) 
      )";
 echo $sql ."<br><br>";
 
@@ -95,9 +95,9 @@ echo $sql ."<br><br>";
     }else {
         echo "errore " . $conn->error;
     }
-
+*/
 //Creazione primary e foreign
-$sql= "ALTER TABLE `colors` 
+/*$sql= "ALTER TABLE `colors` 
        ADD PRIMARY KEY (`id_color`)";
 echo $sql ."<br><br>";
 if ($conn->query($sql) === TRUE){
@@ -140,8 +140,8 @@ if ($conn->query($sql) === TRUE){
   echo "primary creata";
 }else {
   echo "errore " . $conn->error;
-}*/
-
+}
+*/
 /*$sql="ALTER TABLE colors
       ADD FOREIGN KEY (user_id) REFERENCES users(id_user)";
 
@@ -170,9 +170,9 @@ if ($conn->query($sql) === TRUE){
   echo "foreign creata";
 }else {
   echo "errore " . $conn->error;
-}*/
+}
 
-/*$sql="ALTER TABLE stats
+$sql="ALTER TABLE stats
       ADD FOREIGN KEY (user_id) REFERENCES users(id_user)";
 
 echo $sql ."<br><br>";
@@ -190,9 +190,9 @@ if ($conn->query($sql) === TRUE){
   echo "foreign creata";
 }else {
   echo "errore " . $conn->error;
-}*/
+}
 
-/*$sql="ALTER TABLE stats
+$sql="ALTER TABLE stats
       ADD FOREIGN KEY (role_id) REFERENCES roles(id_role)";
 
 echo $sql ."<br><br>";
@@ -200,9 +200,9 @@ if ($conn->query($sql) === TRUE){
   echo "foreign creata";
 }else {
   echo "errore " . $conn->error;
-}*/
+}
 
-/*$sql="ALTER TABLE users
+$sql="ALTER TABLE users
       ADD FOREIGN KEY (role_id) REFERENCES roles(id_role)";
 
 echo $sql ."<br><br>";
