@@ -18,7 +18,7 @@ header{
     display: flex;
     flex-direction: row;
     align-content: center;
-    background-color: rgb(15, 15, 15)
+    background-color: rgb(15, 15, 15);
 }
 
 .titolo{
@@ -30,6 +30,7 @@ header{
     padding: 20px;
     margin-left: 200px;
     font-family: 'Alata', sans-serif;
+    z-index: 1000;
 }
 
 .login{
@@ -223,4 +224,138 @@ footer{
     width: 80%;
     float: left;
     margin: 0 10px;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+}
+
+.hamburger-menu:active,
+.hamburger-menu:focus{
+    outline: none;
+}
+
+.hamburger-menu span{
+    position: absolute;
+    top: 15px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    z-index: 1000;
+    border-radius: 50px;
+    background-color: rgb(39, 181, 46);
+    transition: .3s linear;
+}
+
+.hamburger-menu span:nth-child(1){
+    left:0px;
+}
+
+.hamburger-menu span:nth-child(2){
+    left: 15px;
+    background-color: green;
+}
+
+.hamburger-menu span:nth-child(2):before,
+.hamburger-menu span:nth-child(2)::after{
+    content: 'CLOSE';
+    position: absolute;
+    color: rgb(15, 15, 15);
+    font-size: 7px;
+    font-weight: bold;
+    opacity: 0;
+    transition: .3s linear;
+}
+
+.hamburger-menu span:nth-child(2):before{
+    top: 0; left: -30px;
+    transform: rotate(-90deg);
+}
+
+.hamburger-menu span:nth-child(2):after{
+    top: 0; left: 20px;
+    transform: rotate(90deg);
+}
+
+.hamburger-menu span:nth-child(3){
+    left: 30px;
+}
+
+.hamburger-menu.active span:nth-child(1),
+.hamburger-menu.active span:nth-child(3){
+    left: 15px;
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(2){
+    background-color: #FFF;
+}
+
+.hamburger-menu.active span:nth-child(2)::before{
+    top: 20px; left: -30px;
+    transform: rotate(-120deg);
+}
+
+.hamburger-menu.active span:nth-child(2)::after{
+    top: -10px; left: 20px;
+    transform: rotate(60deg);
+}
+
+.hamburger-menu.active span:nth-child(2)::before,
+.hamburger-menu.active span:nth-child(2)::after{
+    opacity: 1;
+}
+
+.menu{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(39, 181, 46);
+    color: #fff;
+    list-style: none;
+    font-weight: bold;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .4s linear;
+}
+
+.menu.active{
+    top: 0;
+    transition: .6s linear;
+    opacity: 1;
+}
+
+.menu .cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: start;
+    margin-left: 30px;
+}
+
+.menu li:hover{
+    text-decoration-style: underline;    
+}
+
+.menu .voci{
+    margin-top: 70px;
+    list-style: none;
+}
+
+.menu .cont{
+    padding-bottom: 100px;
+}
+
+.menu li{
+    padding: 7px;
 }

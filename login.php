@@ -15,7 +15,7 @@
 
         <header>
             <div class="titolo">
-                <a href="index.php"><script src = "javascript/main.js"></script></a>
+                <a href="index.php"><script src = "js/scritta.js"></script></a>
             </div>
 
             <div class="login" >
