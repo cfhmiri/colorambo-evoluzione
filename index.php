@@ -24,7 +24,7 @@
 
         <div class="login">
             <div class="scritta">
-                <a href="login.php">Login</a> | <a href="iscriviti.php">Iscriviti</a> 
+                <a href="loginFake.php">Login</a> | <a href="iscrivitiFake.php">Iscriviti</a> 
             </div>
             <div class="user"><i class="fas fa-user"></i></div>
                 
